@@ -3,7 +3,9 @@ import random
 
 
 def congratulate_user():
-    print("You win!")
+    print("=============================")
+    print("= Congratulations! You won! =")
+    print("=============================")
 
 
 def is_game_over():
