@@ -3,23 +3,13 @@ import random
 
 
 def congratulate_user():
-    print(f"Congratulations, you won! your words: {guesses}")
+    print("=============================")
+    print("= Congratulations! You won! =")
+    print("=============================")
 
 
 def is_game_over():
     return guessed == WORDS_TO_WIN or errors == ERRORS_TO_LOSE
-
-
-def guess_is_valid(candidate):
-    for letter in candidate:
-        if letter not in word:
-            print(f"You can not use letter {letter}")
-            return False
-        count = word.count(letter)
-        if count < candidate.count(letter):
-            print(f"You can use letter {letter} only {count} times")
-            return False
-    return True
 
 
 guessed = 0
