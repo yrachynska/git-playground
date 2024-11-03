@@ -12,6 +12,8 @@ def is_game_over():
     return guessed == WORDS_TO_WIN or errors == ERRORS_TO_LOSE
 
 
+
+
 guessed = 0
 errors = 0
 
@@ -30,6 +32,9 @@ print(f"Your word is '{word}'")
 
 while not is_game_over():
     guess = input("Your next take: ")
+    while guess in guesses:
+        print("Enter new word")
+        guess = input("Your next take: ")
 
     if not guess_is_valid(guess):
         continue
